@@ -126,7 +126,9 @@ function num1(max,min){
     console.log(Math.floor(Math.random()*(max-min))+min);
 }
 num1(100,50);
-
+// OR this one instead of above one , if you have number already 
+num = Math.floor(Math.random()*(100-50)+50);
+console.log(num);
 
 // Conversion of Number into String and vice-versa ----
 
