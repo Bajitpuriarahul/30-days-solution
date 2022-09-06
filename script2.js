@@ -125,25 +125,35 @@ console.log("Your name is short")
 // console.log(`${timee*365*24*60*60}`);
 
 
-
-let timee = new Date();
-let yyyy = timee.getFullYear();
-let mon = timee.getMonth();
-let dd = timee.getDate();
-let hh = timee.getHours();
-let mm = timee.getMinutes();
-
-if (mon < 10){
-    console.log(`0${mon +1}`)
-}
-else{
-    console.log(`${mon +1}`)
-};
-
-console.log(`${yyyy}-${mon +1}-${dd} ${hh}:${mm}`);
-
 console.clear();
 
+
+
+function tt(){
+    let timee = new Date();
+let y = timee.getFullYear();
+let mon = timee.getMonth() + 1;
+let d = timee.getDate();
+let h = timee.getHours();
+let m = timee.getMinutes();
+let s = timee.getSeconds();
+
+
+mon = (mon <10) ? "0" + mon : mon;
+d = (d <10) ? "0" + d : d;
+h = (h <10) ? "0" + h : h;
+m = (m <10) ? "0" + m : m;
+s = (s <10) ? "0" + s : s;
+    
+    document.querySelector("#demo").innerHTML =(`${y}-${mon}-${d} ${h}:${m} : ${s}`);}
+
+setInterval(tt, 1000);
+
+// Compare two codes ------------
+function hh(){
+    clock.innerHTML = new Date();
+  }
+  setInterval(hh,1000);
 
 // let myAge = prompt("Enter my age");
 // let yourAge = prompt("Enter your age");
@@ -178,13 +188,13 @@ a>b
 
 // let Month = prompt("Enter the Month");
 
-// if(Month =="September"||"October"||"November" ){
+// if(Month =="September"||Month =="October"|| Month =="November" ){
 //     console.log(`${Month} is the season of Autumn`)
 // }
-// else if (Month =="December"||"January"||"February"){
+// else if (Month =="December"|| Month =="January"|| Month =="February"){
 //     console.log(`${Month} is the season of Winter `)
 // }
-// else if(Month == "March"||"April"||"May"){
+// else if(Month == "March"|| Month =="April"|| Month =="May"){
 //     console.log(`${Month} is the season of Spring`)
 // }
 // else{
@@ -197,16 +207,42 @@ a>b
 
 // Day 2 level 2 Question number 10 , niche wala 
 
-// let randd = "JavaScript";
-// let numm = Math.random(randd);
-// console.log(randd.charAt(numm));
+// To access charachter of a word randomly
+let randd = "JavaScript";
+let result = ""
+let charlength = randd.length;
+for (let i =0; i <charlength; i++)
+   {result = randd.charAt(Math.floor(Math.random()*charlength));}
+   console.log(result);
 
 // Also day 2 ke level 3 solve nai hue 
 
 
 // see day 3 truthy and falsy value 
 // Day 3 Exercise 2 ke math wale questions ------- Nai hue  
-// Also time formate related Questions 
 
 
 // day 4 ke level 2 and 3 wale bhi nai hue 
+
+
+//  let marks = prompt("Enter your marks to get grades");
+
+//  if (100>=marks && marks>=80){
+//     console.log("A")
+//  }
+//  else if  (79>=marks && marks>=70){
+//     console.log("B")
+//  }
+//  else if (69>=marks && marks>=60){
+//     console.log("C")
+//  }
+//  else if (59>=marks && marks>=50){
+//     console.log("D")
+//  }
+//  else if (49>=marks && marks>=0){
+//     console.log("F")
+//  }
+
+
+
+
